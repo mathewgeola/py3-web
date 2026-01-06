@@ -1,11 +1,11 @@
-import web
+import py3_web
 
 
 def test_cookies():
     cookies = {
         "package": "py3-web"
     }
-    print(web.cookies.dict_to_str(cookies))
+    print(py3_web.cookies.dict_to_str(cookies))
 
 
 if __name__ == '__main__':

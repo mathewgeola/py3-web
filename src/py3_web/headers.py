@@ -6,7 +6,7 @@ import requests.structures
 import scrapy
 from fake_useragent import UserAgent
 
-import web
+import py3_web
 
 
 def get_default(**kwargs: Any) -> dict[str, str]:
@@ -58,9 +58,9 @@ def response_headers_to_cookies_dict(
             for key, morsel in simple_cookie.items():
                 cookies[key] = morsel.value
     elif isinstance(response_headers, requests.structures.CaseInsensitiveDict):
-        cookies = web.cookies.str_to_dict(response_headers.get("Set-Cookie"))
+        cookies = py3_web.cookies.str_to_dict(response_headers.get("Set-Cookie"))
     elif isinstance(response_headers, httpx.Headers):
-        cookies = web.cookies.str_to_dict(response_headers.get("Set-Cookie"))
+        cookies = py3_web.cookies.str_to_dict(response_headers.get("Set-Cookie"))
     else:
         cookies = None
     return cookies

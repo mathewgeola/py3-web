@@ -2,7 +2,7 @@ import re
 from typing import Any
 
 import bs4
-import execute
+import py3_execute
 import httpx
 import orjson
 import parsel
@@ -12,7 +12,7 @@ import requests
 def jsonp_to_json(jsonp: str) -> dict[str, Any]:
     func_name = re.match(r"^(?P<func_name>.*?)\({.*}\)\S*$", jsonp, re.DOTALL).groupdict()["func_name"]
     js_code = f"function {func_name}(o){{return o}};function sdk(){{return JSON.stringify({jsonp})}};"
-    json_str = execute.js.execute_javascript_by_py_mini_racer(js_code, func_name="sdk")
+    json_str = py3_execute.js.execute_javascript_by_py_mini_racer(js_code, func_name="sdk")
     json_obj = orjson.loads(json_str)
     return json_obj
 
