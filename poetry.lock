@@ -994,14 +994,14 @@ files = [
 
 [[package]]
 name = "py3-execute"
-version = "0.0.3"
+version = "0.0.4"
 description = "python3 execute"
 optional = false
 python-versions = ">=3.12"
 groups = ["main"]
 files = [
-    {file = "py3_execute-0.0.3-py3-none-any.whl", hash = "sha256:012d8b29b39b5c0cb00ae10e41d24974a0868411696a42f343508e6ec942d495"},
-    {file = "py3_execute-0.0.3.tar.gz", hash = "sha256:f82fd87bf7f4a6d7e55575e600fe6710774087a0977e922ab2f08dcecab8d2c5"},
+    {file = "py3_execute-0.0.4-py3-none-any.whl", hash = "sha256:405dc7532d26cd6be4a27ea749e2ee280d21e338d2366c4a1d75f03c726f8f2e"},
+    {file = "py3_execute-0.0.4.tar.gz", hash = "sha256:d395351fcb05a8a2e0c0c8617c0eed7d95ec93cb96e3bbedb042f44a68ca7f30"},
 ]
 
 [package.dependencies]
@@ -1407,4 +1407,4 @@ testing = ["coverage[toml]", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "273afb01648252438211e52be0883a1d1958e947808ca2fce2a19bf89ef3f238"
+content-hash = "ffafe23732ed9f5180f456862822b296703fa557c04d37e65e753ab36e9dcd19"
