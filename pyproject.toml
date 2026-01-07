@@ -1,6 +1,6 @@
 [project]
 name = "py3-web"
-version = "0.0.3"
+version = "0.0.4"
 description = "python3 web"
 authors = [
     {name = "mathewgeola",email = "mathewgeola@gmail.com"}
@@ -15,7 +15,8 @@ dependencies = [
     "bs4 (>=0.0.2,<0.0.3)",
     "furl (>=2.1.4,<3.0.0)",
     "htmlmin (>=0.1.12,<0.2.0)",
-    "httpx (>=0.28.1,<0.29.0)"
+    "httpx (>=0.28.1,<0.29.0)",
+    "requests (>=2.32.5,<3.0.0)"
 ]
 
 

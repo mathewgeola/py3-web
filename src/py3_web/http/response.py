@@ -2,10 +2,10 @@ import re
 from typing import Any
 
 import bs4
-import py3_execute
 import httpx
 import orjson
 import parsel
+import py3_execute
 import requests
 
 
