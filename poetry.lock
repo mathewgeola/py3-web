@@ -318,13 +318,28 @@ files = [
 ]
 
 [[package]]
+name = "click"
+version = "8.3.1"
+description = "Composable command line interface toolkit"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "click-8.3.1-py3-none-any.whl", hash = "sha256:981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6"},
+    {file = "click-8.3.1.tar.gz", hash = "sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 groups = ["main"]
-markers = "sys_platform == \"win32\""
+markers = "sys_platform == \"win32\" or platform_system == \"Windows\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
@@ -450,6 +465,21 @@ files = [
 ]
 
 [[package]]
+name = "datarecorder"
+version = "3.6.2"
+description = "用于记录数据的模块。"
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "DataRecorder-3.6.2-py3-none-any.whl", hash = "sha256:41ad022c4c1db58a0f4236f6a4991d1f98cd76ec049484b172bbb3040455e5ff"},
+    {file = "DataRecorder-3.6.2.tar.gz", hash = "sha256:8c9024736692af68b947fd884589e685c4f27bc29d031b81164457b09c60e1e5"},
+]
+
+[package.dependencies]
+openpyxl = "*"
+
+[[package]]
 name = "defusedxml"
 version = "0.7.1"
 description = "XML bomb protection for Python stdlib modules"
@@ -459,6 +489,56 @@ groups = ["main"]
 files = [
     {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
     {file = "defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"},
+]
+
+[[package]]
+name = "downloadkit"
+version = "2.0.7"
+description = "一个简洁易用的多线程文件下载工具。"
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "DownloadKit-2.0.7-py3-none-any.whl", hash = "sha256:55b142d26b4e7ae01fff2181991c92aca9b895f75e2cd8a54f4a3b48c50b90b4"},
+    {file = "DownloadKit-2.0.7.tar.gz", hash = "sha256:601e423d1d4d0bd3e933524d06c913e744577d455990ec20afc3fb1f79aea9a7"},
+]
+
+[package.dependencies]
+DataRecorder = ">=3.4.11"
+requests = "*"
+
+[[package]]
+name = "drissionpage"
+version = "4.1.1.2"
+description = "Python based web automation tool. It can control the browser and send and receive data packets."
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "DrissionPage-4.1.1.2-py3-none-any.whl", hash = "sha256:c8b58a8d495550142c10499ce7128655b2baf8f38f46604ba0ce951a148d88e8"},
+    {file = "drissionpage-4.1.1.2.tar.gz", hash = "sha256:e4375d3536519a1d24430270e2871de3015836b301cbdfb96583234e6d6ef4c1"},
+]
+
+[package.dependencies]
+click = "*"
+cssselect = "*"
+DownloadKit = ">=2.0.7"
+lxml = "*"
+psutil = "*"
+requests = "*"
+tldextract = ">=3.4.4"
+websocket-client = "*"
+
+[[package]]
+name = "et-xmlfile"
+version = "2.0.0"
+description = "An implementation of lxml.xmlfile for the standard library"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "et_xmlfile-2.0.0-py3-none-any.whl", hash = "sha256:7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa"},
+    {file = "et_xmlfile-2.0.0.tar.gz", hash = "sha256:dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"},
 ]
 
 [[package]]
@@ -838,6 +918,21 @@ files = [
 ]
 
 [[package]]
+name = "openpyxl"
+version = "3.1.5"
+description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "openpyxl-3.1.5-py2.py3-none-any.whl", hash = "sha256:5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2"},
+    {file = "openpyxl-3.1.5.tar.gz", hash = "sha256:cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"},
+]
+
+[package.dependencies]
+et-xmlfile = "*"
+
+[[package]]
 name = "orderedmultidict"
 version = "1.0.2"
 description = "Ordered Multivalue Dictionary"
@@ -991,6 +1086,41 @@ files = [
     {file = "protego-0.5.0-py3-none-any.whl", hash = "sha256:4237227840a67fdeec289a9b89652455b5657806388c17e1a556e160435f8fc5"},
     {file = "protego-0.5.0.tar.gz", hash = "sha256:225dee0acfcc71de8c6f7cef9c618e5a9d3e7baa7ae1470b8d076a064033c463"},
 ]
+
+[[package]]
+name = "psutil"
+version = "7.2.1"
+description = "Cross-platform lib for process and system monitoring."
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "psutil-7.2.1-cp313-cp313t-macosx_10_13_x86_64.whl", hash = "sha256:ba9f33bb525b14c3ea563b2fd521a84d2fa214ec59e3e6a2858f78d0844dd60d"},
+    {file = "psutil-7.2.1-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:81442dac7abfc2f4f4385ea9e12ddf5a796721c0f6133260687fec5c3780fa49"},
+    {file = "psutil-7.2.1-cp313-cp313t-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:ea46c0d060491051d39f0d2cff4f98d5c72b288289f57a21556cc7d504db37fc"},
+    {file = "psutil-7.2.1-cp313-cp313t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:35630d5af80d5d0d49cfc4d64c1c13838baf6717a13effb35869a5919b854cdf"},
+    {file = "psutil-7.2.1-cp313-cp313t-win_amd64.whl", hash = "sha256:923f8653416604e356073e6e0bccbe7c09990acef442def2f5640dd0faa9689f"},
+    {file = "psutil-7.2.1-cp313-cp313t-win_arm64.whl", hash = "sha256:cfbe6b40ca48019a51827f20d830887b3107a74a79b01ceb8cc8de4ccb17b672"},
+    {file = "psutil-7.2.1-cp314-cp314t-macosx_10_15_x86_64.whl", hash = "sha256:494c513ccc53225ae23eec7fe6e1482f1b8a44674241b54561f755a898650679"},
+    {file = "psutil-7.2.1-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:3fce5f92c22b00cdefd1645aa58ab4877a01679e901555067b1bd77039aa589f"},
+    {file = "psutil-7.2.1-cp314-cp314t-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:93f3f7b0bb07711b49626e7940d6fe52aa9940ad86e8f7e74842e73189712129"},
+    {file = "psutil-7.2.1-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:d34d2ca888208eea2b5c68186841336a7f5e0b990edec929be909353a202768a"},
+    {file = "psutil-7.2.1-cp314-cp314t-win_amd64.whl", hash = "sha256:2ceae842a78d1603753561132d5ad1b2f8a7979cb0c283f5b52fb4e6e14b1a79"},
+    {file = "psutil-7.2.1-cp314-cp314t-win_arm64.whl", hash = "sha256:08a2f175e48a898c8eb8eace45ce01777f4785bc744c90aa2cc7f2fa5462a266"},
+    {file = "psutil-7.2.1-cp36-abi3-macosx_10_9_x86_64.whl", hash = "sha256:b2e953fcfaedcfbc952b44744f22d16575d3aa78eb4f51ae74165b4e96e55f42"},
+    {file = "psutil-7.2.1-cp36-abi3-macosx_11_0_arm64.whl", hash = "sha256:05cc68dbb8c174828624062e73078e7e35406f4ca2d0866c272c2410d8ef06d1"},
+    {file = "psutil-7.2.1-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5e38404ca2bb30ed7267a46c02f06ff842e92da3bb8c5bfdadbd35a5722314d8"},
+    {file = "psutil-7.2.1-cp36-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:ab2b98c9fc19f13f59628d94df5cc4cc4844bc572467d113a8b517d634e362c6"},
+    {file = "psutil-7.2.1-cp36-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:f78baafb38436d5a128f837fab2d92c276dfb48af01a240b861ae02b2413ada8"},
+    {file = "psutil-7.2.1-cp36-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:99a4cd17a5fdd1f3d014396502daa70b5ec21bf4ffe38393e152f8e449757d67"},
+    {file = "psutil-7.2.1-cp37-abi3-win_amd64.whl", hash = "sha256:b1b0671619343aa71c20ff9767eced0483e4fc9e1f489d50923738caf6a03c17"},
+    {file = "psutil-7.2.1-cp37-abi3-win_arm64.whl", hash = "sha256:0d67c1822c355aa6f7314d92018fb4268a76668a536f133599b91edd48759442"},
+    {file = "psutil-7.2.1.tar.gz", hash = "sha256:f7583aec590485b43ca601dd9cea0dcd65bd7bb21d30ef4ddbf4ea6b5ed1bdd3"},
+]
+
+[package.extras]
+dev = ["abi3audit", "black", "check-manifest", "coverage", "packaging", "psleak", "pylint", "pyperf", "pypinfo", "pytest", "pytest-cov", "pytest-instafail", "pytest-xdist", "requests", "rstcheck", "ruff", "setuptools", "sphinx", "sphinx_rtd_theme", "toml-sort", "twine", "validate-pyproject[all]", "virtualenv", "vulture", "wheel"]
+test = ["psleak", "pytest", "pytest-instafail", "pytest-xdist", "setuptools"]
 
 [[package]]
 name = "py3-execute"
@@ -1359,6 +1489,23 @@ files = [
 ]
 
 [[package]]
+name = "websocket-client"
+version = "1.9.0"
+description = "WebSocket client for Python with low level API options"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "websocket_client-1.9.0-py3-none-any.whl", hash = "sha256:af248a825037ef591efbf6ed20cc5faa03d3b47b9e5a2230a529eeee1c1fc3ef"},
+    {file = "websocket_client-1.9.0.tar.gz", hash = "sha256:9e813624b6eb619999a97dc7958469217c3176312b3a16a4bd1bc7e08a46ec98"},
+]
+
+[package.extras]
+docs = ["Sphinx (>=6.0)", "myst-parser (>=2.0.0)", "sphinx_rtd_theme (>=1.1.0)"]
+optional = ["python-socks", "wsaccel"]
+test = ["pytest", "websockets"]
+
+[[package]]
 name = "zope-interface"
 version = "8.1.1"
 description = "Interfaces for Python"
@@ -1407,4 +1554,4 @@ testing = ["coverage[toml]", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "735e4e81257b49a819d6ea3ebfdb6d36adff29518f33349dcc89c6ab0f04b990"
+content-hash = "4c15b3addba6779fa9f9a600c756bc81079a38534ecb2595ec22e504c4781e28"
